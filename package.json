@@ -1,0 +1,46 @@
+{
+  "name": "battleship-sa",
+  "private": true,
+  "version": "0.2.0",
+  "bugs": {
+    "url": "https://github.com/eugene-matvejev/battleship-game-api-node/issues"
+  },
+  "homepage": "https://github.com/eugene-matvejev/battleship-game-api-node#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugene-matvejev/battleship-game-api-node.git"
+  },
+  "license": "ISC",
+  "author": "Eugene Matvejev, <eugene.matvejev@gmail.com>",
+  "description": "WIP",
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "apollo-server": "^2.6.3",
+    "graphql": "^14.3.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.5.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "start:debug": "nodemon --inspect ./src/index.js",
+    "build": "babel",
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**?(/*).js?(x)",
+      "!src/parameters.js?(x)",
+      "!src/**?(/*)index.js?(x)",
+      "!src/__configs/**.js?(x)"
+    ]
+  }
+}
