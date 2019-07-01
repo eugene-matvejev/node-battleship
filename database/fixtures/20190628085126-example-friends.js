@@ -2,8 +2,8 @@
 
 const crypto = require('crypto');
 
-const email1 = 'user@example.com';
-const email2 = 'user-banned@example.com';
+const email1 = 'user2@example.com';
+const email2 = 'user3@example.com';
 const password = 'password';
 
 module.exports = {
@@ -20,8 +20,12 @@ module.exports = {
                     password: crypto.createHmac('sha256', '').update(`${email2}:${password}`).digest('hex'),
                 },
             ],
-            {}
-        );
+            { 
+                returning: true,
+                hooks: true,
+                individualHooks: true,
+            }
+        ).then((...args) => console.log({ args, models: Sequelize.models, Sequelize }));
     },
 
     down: (queryInterface, Sequelize) => {

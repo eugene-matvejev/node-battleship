@@ -14,24 +14,31 @@ models.sequelize
 // The GraphQL schema
 const typeDefs = gql`
     type Query {
-        allUsers: [User]
+        users: [User]
     }
 
     type User {
         id: ID!
         email: String!
+        friends: [User]
     }
 `;
 
 // A map of functions which return data for the schema.
 const resolvers = {
     Query: {
-        allUsers: (_0, _1, { models }, _3) => {
+        users: (entity, _1, { models }, _3) => {
             debugger;
 
             return models.User.findAll({ raw: true });
         },
     },
+    User: {
+        friends: (entity, _1, { models }, _3) => {
+            debugger;
+            return models.User.findAll({ raw: true });
+        }
+    }
 };
 
 const server = new ApolloServer({
