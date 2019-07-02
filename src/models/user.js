@@ -1,5 +1,4 @@
-'use strict';
-module.exports = (sequelize, DataTypes) => {
+export default (sequelize, DataTypes) => {
     const User = sequelize.define(
         'User',
         {
@@ -10,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
             },
             email: {
                 type: DataTypes.STRING,
-                // primaryKey: true,
                 unique: true,
             },
             password: {
@@ -32,9 +30,5 @@ module.exports = (sequelize, DataTypes) => {
     User.belongsToMany(User, { timestamps: false, as: 'children', foreignKey: 'userId', through: 'user_friendship' });
     User.belongsToMany(User, { timestamps: false, as: 'parents', foreignKey: 'friendId', through: 'user_friendship' });
 
-    // User.belongsToMany(User, { through: 'friendship' });
-    // User.associate = function (models) {
-    //   // associations can be defined here
-    // };
     return User;
 };

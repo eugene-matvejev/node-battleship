@@ -18,20 +18,24 @@
   },
   "dependencies": {
     "apollo-server": "^2.6.3",
+    "dataloader": "^1.4.0",
     "graphql": "^14.3.1",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.12"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
     "sequelize-cli": "^5.5.0"
   },
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js",
-    "start:debug": "nodemon --inspect ./src/index.js",
+    "start": "nodemon --exec babel-node ./src/index.js",
+    "start:debug": "npm run start -- --inspect",
     "build": "babel",
     "test": "jest"
   },
@@ -39,8 +43,7 @@
     "collectCoverageFrom": [
       "src/**?(/*).js?(x)",
       "!src/parameters.js?(x)",
-      "!src/**?(/*)index.js?(x)",
-      "!src/__configs/**.js?(x)"
+      "!src/**?(/*)index.js?(x)"
     ]
   }
 }
