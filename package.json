@@ -19,6 +19,7 @@
   "dependencies": {
     "apollo-server": "^2.6.3",
     "dataloader": "^1.4.0",
+    "dotenv": "^8.0.0",
     "graphql": "^14.3.1",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.12"
@@ -34,7 +35,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node ./src/index.js",
+    "start": "node -r dotenv/config node_modules/.bin/nodemon ./src/index.js",
     "start:debug": "npm run start -- --inspect",
     "build": "babel",
     "test": "jest"
