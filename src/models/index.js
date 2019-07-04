@@ -10,7 +10,7 @@ const context = fs
     .readdirSync(__dirname)
     .reduce(
         (acc, file) => {
-            if ((file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js') && (file.slice(-8) !== '.test.js')) {
+            if ((file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js')) {
                 const model = sequelize['import'](path.join(__dirname, file));
                 acc[model.name] = model;
             }

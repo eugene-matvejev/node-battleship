@@ -15,7 +15,8 @@ DB_DIALECT := mysql
 	-v $(PWD)/var:/www/var \
 	-v $(PWD)/.babelrc:/www/.babelrc \
 	-v $(PWD)/.env:/www/.env \
-	-v $(PWD)/.sequelizerc:/www/.sequelizerc
+	-v $(PWD)/.sequelizerc:/www/.sequelizerc \
+	-v $(PWD)/nodemon.json:/www/nodemon.json
 
 .ENV_VARIABLES := \
 	-e PORT=$(PORT) \

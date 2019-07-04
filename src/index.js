@@ -1,31 +1,12 @@
-import { ApolloServer, gql } from 'apollo-server';
+import { ApolloServer } from 'apollo-server';
+import { typeDefs, resolvers } from './graphql';
 import models from './models';
-
-const typeDefs = gql`
-    type Query {
-        users: [User]
-    }
-
-    type User {
-        id: ID!
-        email: String!
-        friends: [User]
-    }
-`;
-
-const resolvers = {
-    Query: {
-        users: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
-    },
-    User: {
-        friends: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
-    }
-};
 
 models
     .sequelize
-    // .sync({ force: true })
-    .sync()
+    .sync({
+        // force: true
+    })
     .then(() => {
         new ApolloServer({
             typeDefs,
@@ -42,4 +23,3 @@ models
     .catch(err => {
         console.error('Unable to connect to the database:', err);
     });
-
