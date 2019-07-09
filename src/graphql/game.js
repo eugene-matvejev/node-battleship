@@ -6,17 +6,39 @@ export default {
         }
 
         type Game {
-            name: ID!
-            players: [User]!
+            id: ID!
+            battlefields: [Battlefield]!
         }
     `,
     resolvers: {
         Query: {
-            game: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
-            games: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
+            game: (entity, args, { models }, info) => {
+                return models.Game.findOne({
+                    where: {
+                        id: args.id,
+                    },
+                    raw: true,
+                });
+            },
+            games: (entity, args, { models }, info) => ({}),
         },
         Game: {
-            players: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
+            battlefields: async (entity, args, { models }, info) => {
+                debugger;
+                const a = await models.Battlefield.findAll({
+                    include: [
+                        {
+                            model: models.Game,
+                            where: {
+                                id: entity.id,
+                            },
+                        },
+                    ],
+                    raw: true,
+                });
+                debugger
+                return a;
+            },
         }
     },
 }

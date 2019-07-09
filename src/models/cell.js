@@ -1,6 +1,6 @@
 export default (sequelize, DataTypes) => {
     const model = sequelize.define(
-        'User',
+        'Cell',
         {
             id: {
                 // type: DataTypes.UUID,
@@ -8,28 +8,29 @@ export default (sequelize, DataTypes) => {
                 primaryKey: true,
                 autoIncrement: true,
             },
-            email: {
-                type: DataTypes.STRING,
-                unique: true,
-            },
-            password: {
-                type: DataTypes.STRING(64),
+            coordinate: {
+                type: DataTypes.STRING(3),
                 allowNull: false,
             },
-            flags: {
+            battlefield: {
+                // type: DataTypes.UUID,
+                type: DataTypes.INTEGER,
+                allowNull: false,
+            },
+            seq: {
                 type: DataTypes.INTEGER,
                 allowNull: false,
                 defaultValue: 0,
             },
         },
         {
-            tableName: 'users',
+            tableName: 'cells',
             timestamps: false,
         }
     );
 
-    model.belongsToMany(model, { timestamps: false, as: 'children', foreignKey: 'userId', through: 'user_friendship' });
-    model.belongsToMany(model, { timestamps: false, as: 'parents', foreignKey: 'friendId', through: 'user_friendship' });
+    // model.belongsTo(model, { timestamps: false, as: 'children', foreignKey: 'battlefieldId', through: 'user_friendship' });
+    // model.belongsToMany(model, { timestamps: false, as: 'parents', foreignKey: 'friendId', through: 'user_friendship' });
 
     return model;
 };

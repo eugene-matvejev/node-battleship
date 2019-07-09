@@ -38,8 +38,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r dotenv/config node_modules/.bin/nodemon ./src/index.js",
+    "sequlize": "node -r dotenv/config node_modules/.bin/sequelize",
     "start:debug": "npm run start -- --inspect",
-    "build": "babel",
+    "build": "babel --delete-dir-on-start --copy-files --out-dir ./build --verbose ./src",
     "test": "jest"
   },
   "jest": {

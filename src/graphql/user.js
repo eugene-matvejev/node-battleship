@@ -13,11 +13,11 @@ export default {
     `,
     resolvers: {
         Query: {
-            user: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
-            users: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
+            user: (entity, args, { models }, info) => models.User.findAll({ raw: true }),
+            users: (entity, args, { models }, info) => models.User.findAll({ raw: true }),
         },
         User: {
-            friends: (entity, _1, { models }, _3) => models.User.findAll({ raw: true }),
+            friends: (entity, args, { models }, info) => models.User.findAll({ raw: true }),
         }
     },
 }

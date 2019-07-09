@@ -13,7 +13,15 @@ models
             resolvers,
             context: {
                 models,
-            }
+            },
+            formatError: (error) => {
+                console.log(error);
+                return error;
+            },
+            formatResponse: (response) => {
+                console.log(response);
+                return response;
+            },
         })
             .listen(process.env.PORT)
             .then(({ url }) => {
