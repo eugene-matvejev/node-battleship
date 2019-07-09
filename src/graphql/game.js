@@ -20,14 +20,18 @@ export default {
                     raw: true,
                 });
             },
-            games: (entity, args, { models }, info) => ({}),
+            games: (entity, args, { models }, info) => {
+                return models.Game.findAll({
+                    raw: true,
+                });
+            },
         },
         Game: {
-            battlefields: async (entity, args, { models }, info) => {
-                debugger;
-                const a = await models.Battlefield.findAll({
+            battlefields: (entity, args, { models }, info) => {
+                return models.Battlefield.findAll({
                     include: [
                         {
+                            attributes: [],
                             model: models.Game,
                             where: {
                                 id: entity.id,
@@ -36,8 +40,6 @@ export default {
                     ],
                     raw: true,
                 });
-                debugger
-                return a;
             },
         }
     },

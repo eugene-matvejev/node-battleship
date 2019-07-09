@@ -24,21 +24,13 @@ export default (sequelize, DataTypes) => {
             timestamps: false,
         }
     );
-    // class Country extends Model {}
-    // Country.init({ isoCode: Sequelize.STRING }, { sequelize, modelName: 'country' });
-    // class City extends Model {}
-    // City.init({ countryCode: Sequelize.STRING }, { sequelize, modelName: 'city' });
 
-    // Here we can connect countries and cities base on country code
-    // Country.hasMany(City, {foreignKey: 'countryCode', sourceKey: 'isoCode'});
-    // City.belongsTo(Country, {foreignKey: 'countryCode', targetKey: 'isoCode'});
-
-    model.associate = function ({ Game, Battlefield, User }) {
+    model.associate = ({ Game, Battlefield, User }) => {
         Game.hasMany(Battlefield, { foreignKey: 'game', sourceKey: 'id' });
-        // User.hasMany(Battlefield, { foreignKey: 'game_owner', sourceKey: 'id' });
+        User.hasMany(Battlefield, { foreignKey: 'owner', sourceKey: 'id' });
 
         Battlefield.belongsTo(Game, { foreignKey: 'game', targetKey: 'id' });
-        // Battlefield.belongsTo(User, { foreignKey: 'game_owner', targetKey: 'owner' });
+        Battlefield.belongsTo(User, { foreignKey: 'owner', targetKey: 'id' });
     }
 
     return model;

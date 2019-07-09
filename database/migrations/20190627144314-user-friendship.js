@@ -5,13 +5,13 @@ module.exports = {
         return queryInterface.createTable(
             'user_friendship',
             {
-                userId: {
+                user: {
                     type: Sequelize.INTEGER,
                     primaryKey: true,
                     references: { model: 'users', key: 'id' },
                     onDelete: 'CASCADE',
                 },
-                friendId: {
+                friend: {
                     type: Sequelize.INTEGER,
                     primaryKey: true,
                     references: { model: 'users', key: 'id' },

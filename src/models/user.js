@@ -28,8 +28,8 @@ export default (sequelize, DataTypes) => {
         }
     );
 
-    model.belongsToMany(model, { timestamps: false, as: 'children', foreignKey: 'userId', through: 'user_friendship' });
-    model.belongsToMany(model, { timestamps: false, as: 'parents', foreignKey: 'friendId', through: 'user_friendship' });
+    model.belongsToMany(model, { timestamps: false, as: 'friend', foreignKey: 'user', through: 'user_friendship' });
+    model.belongsToMany(model, { timestamps: false, as: 'friendship_owner', foreignKey: 'friend', through: 'user_friendship' });
 
     return model;
 };

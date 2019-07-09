@@ -29,8 +29,11 @@ export default (sequelize, DataTypes) => {
         }
     );
 
-    // model.belongsTo(model, { timestamps: false, as: 'children', foreignKey: 'battlefieldId', through: 'user_friendship' });
-    // model.belongsToMany(model, { timestamps: false, as: 'parents', foreignKey: 'friendId', through: 'user_friendship' });
+    model.associate = ({ Battlefield, Cell }) => {
+        Battlefield.hasMany(Cell, { foreignKey: 'battlefield', sourceKey: 'id' });
+
+        Cell.belongsTo(Battlefield, { foreignKey: 'battlefield', targetKey: 'id' });
+    }
 
     return model;
 };

@@ -20,8 +20,12 @@ const context = fs
         {}
     );
 
-for (const model in context) {
-    model.associate && model.associate(context);
+for (const name in context) {
+    const model = context[name];
+
+    if (model.associate) {
+        model.associate(context);
+    }
 }
 
 context.sequelize = sequelize;

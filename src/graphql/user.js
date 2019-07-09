@@ -13,11 +13,36 @@ export default {
     `,
     resolvers: {
         Query: {
-            user: (entity, args, { models }, info) => models.User.findAll({ raw: true }),
-            users: (entity, args, { models }, info) => models.User.findAll({ raw: true }),
+            user: (entity, args, { models }, info) => {
+                return models.User.findOne({
+                    where: {
+                        id: args.id,
+                    },
+                    raw: true,
+                });
+            },
+            users: (entity, args, { models }, info) => {
+                return models.User.findAll({
+                    raw: true,
+                });
+            },
         },
         User: {
-            friends: (entity, args, { models }, info) => models.User.findAll({ raw: true }),
+            friends: (entity, args, { models }, info) => {
+                return models.User.findAll({
+                    include: [
+                        {
+                            attributes: [],
+                            model: models.User,
+                            as: 'friendship_owner',
+                            where: {
+                                id: entity.id,
+                            },
+                        },
+                    ],
+                    raw: true,
+                });
+            },
         }
     },
 }

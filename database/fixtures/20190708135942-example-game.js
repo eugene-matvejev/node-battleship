@@ -61,7 +61,8 @@ module.exports = {
             }
 
             return cells;
-        })(battlefield - 1, battlefield);
+            /** last insert + 1 */
+        })(battlefield, battlefield + 1);
 
         return queryInterface.bulkInsert(
             'cells',
