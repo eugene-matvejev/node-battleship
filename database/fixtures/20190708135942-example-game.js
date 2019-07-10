@@ -42,7 +42,7 @@ module.exports = {
             ],
             {}
         );
-
+        console.log({ battlefield });
         const cells = ((...battlefields) => {
             const cells = [];
 
