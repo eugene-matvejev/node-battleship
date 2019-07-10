@@ -15,7 +15,7 @@
 | __coverage__     |
 | _< codecov.io >_ | [![coverage][ci.coverage-master-badge]][ci.coverage-master] | [![coverage][ci.coverage-heroku-badge]][ci.coverage-heroku]
 
-# battleship GraphQL backend 
+# battleship GraphQL backend
 
 ## THIS IS SPARE TIME PROJECT, WORK IN PROGRESS!
 
@@ -75,9 +75,11 @@ CI build is mandatory check for every PR into master/heroku branches
 
 ### used environment variables
 
-* **PORT** [default 8081] as number
-* **DB_HOSTNAME** [default 127.0.0.1] as string
-* **DB_USERNAME** [default root] as string
-* **DB_PASSWORD** [default password] as string
-* **DB_NAME** [default battleship] as string
-* **DB_DIALECT** [default mysql] as string
+| variable      | default value | used as
+|---            |---            |---
+| _PORT_        | 8081          | number
+| _DB_HOSTNAME_ | 127.0.0.1     | string
+| _DB_USERNAME_ | root          | string
+| _DB_PASSWORD_ | password      | string
+| _DB_NAME_     | battleship    | string
+| _DB_DIALECT_  | mysql         | string
