@@ -49,6 +49,8 @@
       "src/**?(/*).js?(x)",
       "!src/**?(/*)index.js?(x)"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>src/jest-provision.js"
+    "setupFilesAfterEnv": [
+      "<rootDir>src/jest-provision.js"
+    ]
   }
 }

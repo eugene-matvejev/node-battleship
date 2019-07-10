@@ -1,8 +1,8 @@
 export default {
     typeDefs: `
         extend type Query {
-            battlefield(id: ID!): Game
-            battlefields: [Game]
+            battlefield(id: ID!): Battlefield
+            battlefields: [Battlefield]
         }
 
         type Battlefield {
