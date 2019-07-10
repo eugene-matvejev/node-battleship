@@ -9,9 +9,11 @@ const password = 'password';
 module.exports = {
     up: async (queryInterface, Sequelize) => {
         const [
-            friend,
+            friend1,
+            friend2,
             [[{ id: user }]],
         ] = await Promise.all([
+            /** work around https://github.com/sequelize/sequelize/issues/11175 */
             queryInterface.bulkInsert(
                 'users',
                 [
@@ -19,6 +21,13 @@ module.exports = {
                         email: email1,
                         password: crypto.createHmac('sha256', '').update(`${email1}:${password}`).digest('hex'),
                     },
+                ],
+                {}
+            ),
+            /** work around https://github.com/sequelize/sequelize/issues/11175 */
+            queryInterface.bulkInsert(
+                'users',
+                [
                     {
                         email: email2,
                         password: crypto.createHmac('sha256', '').update(`${email2}:${password}`).digest('hex'),
@@ -41,11 +50,11 @@ module.exports = {
             [
                 {
                     user,
-                    friend,
+                    friend: friend1,
                 },
                 {
                     user,
-                    friend: friend + 1,
+                    friend: friend2,
                 },
             ],
             {}

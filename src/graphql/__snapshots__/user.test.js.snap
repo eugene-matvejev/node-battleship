@@ -26,7 +26,16 @@ Object {
 exports[`GraphQL Type: User fetch friend's scalar values 1`] = `
 Object {
   "user": Object {
-    "friends": Array [],
+    "friends": Array [
+      Object {
+        "email": "user2@example.com",
+        "id": "3",
+      },
+      Object {
+        "email": "user3@example.com",
+        "id": "4",
+      },
+    ],
   },
 }
 `;

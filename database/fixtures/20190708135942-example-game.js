@@ -7,7 +7,12 @@ module.exports = {
     up: async (queryInterface, Sequelize) => {
         const [
             game,
-            [[{ id: user1 }, { id: user2 }]]
+            [
+                [
+                    { id: user1 },
+                    { id: user2 },
+                ],
+            ],
         ] = await Promise.all([
             queryInterface.bulkInsert(
                 'games',
@@ -28,21 +33,33 @@ module.exports = {
             ),
         ]);
 
-        const battlefield = await queryInterface.bulkInsert(
-            'battlefields',
-            [
-                {
-                    owner: user1,
-                    game,
-                },
-                {
-                    owner: user2,
-                    game
-                },
-            ],
-            {}
-        );
-        console.log({ battlefield });
+        /** work around https://github.com/sequelize/sequelize/issues/11175 */
+        const [
+            battlefield1,
+            battlefield2,
+        ] = await Promise.all([
+            queryInterface.bulkInsert(
+                'battlefields',
+                [
+                    {
+                        owner: user1,
+                        game,
+                    },
+                ],
+                {}
+            ),
+            queryInterface.bulkInsert(
+                'battlefields',
+                [
+                    {
+                        owner: user2,
+                        game
+                    },
+                ],
+                {}
+            ),
+        ]);
+
         const cells = ((...battlefields) => {
             const cells = [];
 
@@ -61,8 +78,7 @@ module.exports = {
             }
 
             return cells;
-            /** last insert + 1 */
-        })(battlefield, battlefield + 1);
+        })(battlefield1, battlefield2);
 
         return queryInterface.bulkInsert(
             'cells',
