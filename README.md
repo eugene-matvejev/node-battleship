@@ -1,12 +1,12 @@
-[ci.tests-master-badge]: https://circleci.com/gh/eugene-matvejev/battleship-game-gui-react-js/tree/master.svg?style=svg
-[ci.tests-master]: https://circleci.com/gh/eugene-matvejev/battleship-game-gui-react-js/tree/master
-[ci.coverage-master-badge]: https://codecov.io/gh/eugene-matvejev/battleship-game-gui-react-js/branch/master/graph/badge.svg
-[ci.coverage-master]: https://codecov.io/gh/eugene-matvejev/battleship-game-gui-react-js/branch/master
+[ci.tests-master-badge]: https://circleci.com/gh/eugene-matvejev/node-battleship/tree/master.svg?style=svg
+[ci.tests-master]: https://circleci.com/gh/eugene-matvejev/node-battleship/tree/master
+[ci.coverage-master-badge]: https://codecov.io/gh/eugene-matvejev/node-battleship/branch/master/graph/badge.svg
+[ci.coverage-master]: https://codecov.io/gh/eugene-matvejev/node-battleship/branch/master
 
-[ci.tests-heroku-badge]: https://circleci.com/gh/eugene-matvejev/battleship-game-gui-react-js/tree/heroku.svg?style=svg
-[ci.tests-heroku]: https://circleci.com/gh/eugene-matvejev/battleship-game-gui-react-js/tree/heroku
-[ci.coverage-heroku-badge]: https://codecov.io/gh/eugene-matvejev/battleship-game-gui-react-js/branch/heroku/graph/badge.svg
-[ci.coverage-heroku]: https://codecov.io/gh/eugene-matvejev/battleship-game-gui-react-js/branch/heroku
+[ci.tests-heroku-badge]: https://circleci.com/gh/eugene-matvejev/node-battleship/tree/heroku.svg?style=svg
+[ci.tests-heroku]: https://circleci.com/gh/eugene-matvejev/node-battleship/tree/heroku
+[ci.coverage-heroku-badge]: https://codecov.io/gh/eugene-matvejev/node-battleship/branch/heroku/graph/badge.svg
+[ci.coverage-heroku]: https://codecov.io/gh/eugene-matvejev/node-battleship/branch/heroku
 
 |                  | master                                                      | heroku
 |---               |---                                                          |---
@@ -35,15 +35,15 @@ if you're using `make` commands, local **node.js** and **npm** aren't required
 * [npm](https://www.npmjs.com/) v6+ or [yarn](https://yarnpkg.com/)
 * __optional__ [makefile](https://en.wikipedia.org/wiki/Makefile) comes out of the box in *nix enviroments
 * __optional__ [docker](https://www.docker.com/) v18.09+
-* __optional__ [sqlite3](https://docs.docker.com/compose/) v3+ *for 'integration' tests only*
+* __optional__ [sqlite3](https://www.sqlite.org/index.html) v3+ *for 'integration' tests only*
 
 ### used technologies
 
 * [jest](https://facebook.github.io/jest/)
-* [graphql](https://reactjs.org/)
-* [sequlize](https://reactjs.org/)
-* [apollo server](https://reactjs.org/)
-* [express.js](https://reactjs.org/)
+* [graphql](https://graphql.org/)
+* [sequlize](http://docs.sequelizejs.com/)
+* [apollo server](https://www.apollographql.com/docs/apollo-server/)
+* [express.js](https://expressjs.com/)
 
 ### used services
 
@@ -85,9 +85,8 @@ CI build is mandatory check for every PR into master/heroku branches
 ### used environment variables
 
 * **PORT** [default 8081] as number
-
-* **DB_HOSTNAME** [default 5] as number
-* **DB_USERNAME** [default 10] as number
-* **DB_PASSWORD** [default 1] as number
-* **DB_NAME** [default 3] as number
-* **DB_DIALECT** [default 3] as number
+* **DB_HOSTNAME** [default 127.0.0.1] as string
+* **DB_USERNAME** [default root] as string
+* **DB_PASSWORD** [default password] as string
+* **DB_NAME** [default battleship] as string
+* **DB_DIALECT** [default mysql] as string
