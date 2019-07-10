@@ -1,35 +1,33 @@
 describe('GraphQL Type: Game', () => {
-    // (new Uint8Array(iter)).forEach((_, i) => {
-        it(`fetch game's only scalar values`, async () => {
-            const result = await query(
+    it(`fetch game's only scalar values`, async () => {
+        const { data } = await query(
+            {
+                query: `
                 {
-                    query: `
-                    {
-                        game(id: 1) {
+                    game(id: 1) {
+                        id
+                    }
+                }`
+            }
+        );
+
+        expect(data).toMatchSnapshot();
+    });
+
+    it(`fetch game's battlefield's scalar values`, async () => {
+        const { data } = await query(
+            {
+                query: `
+                {
+                    game(id: 1) {
+                        battlefields {
                             id
                         }
-                    }`
-                }
-            );
+                    }
+                }`
+            }
+        );
 
-            expect(result).toMatchSnapshot();
-        });
-
-        it(`fetch game's battlefield's scalar values`, async () => {
-            const result = await query(
-                {
-                    query: `
-                    {
-                        game(id: 1) {
-                            battlefields {
-                                id
-                            }
-                        }
-                    }`
-                }
-            );
-
-            expect(result).toMatchSnapshot();
-        });
-    // });
+        expect(data).toMatchSnapshot();
+    });
 });

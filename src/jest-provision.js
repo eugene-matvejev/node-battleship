@@ -51,7 +51,6 @@ const databaseReset = async () => {
                 const migrations = await executeFiles(`${__dirname}/../database/migrations`);
                 const fixtures = await executeFiles(`${__dirname}/../database/fixtures`);
 
-                console.log('migrations finished');
                 console.log({ migrations, fixtures });
             }
         )

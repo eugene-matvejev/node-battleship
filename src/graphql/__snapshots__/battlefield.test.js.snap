@@ -2,53 +2,26 @@
 
 exports[`GraphQL Type: Battlefield fetch battlefield's cells' scalar values 1`] = `
 Object {
-  "data": Object {
-    "battlefield": Object {
-      "cells": Array [],
-    },
-  },
-  "errors": undefined,
-  "extensions": undefined,
-  "http": Object {
-    "headers": Headers {
-      Symbol(map): Object {},
-    },
+  "battlefield": Object {
+    "cells": Array [],
   },
 }
 `;
 
 exports[`GraphQL Type: Battlefield fetch battlefield's only scalar values 1`] = `
 Object {
-  "data": Object {
-    "battlefield": Object {
-      "id": "1",
-    },
-  },
-  "errors": undefined,
-  "extensions": undefined,
-  "http": Object {
-    "headers": Headers {
-      Symbol(map): Object {},
-    },
+  "battlefield": Object {
+    "id": "1",
   },
 }
 `;
 
 exports[`GraphQL Type: Battlefield fetch battlefield's owner's scalar values 1`] = `
 Object {
-  "data": Object {
-    "battlefield": Object {
-      "owner": Object {
-        "email": "user2@example.com",
-        "id": "3",
-      },
-    },
-  },
-  "errors": undefined,
-  "extensions": undefined,
-  "http": Object {
-    "headers": Headers {
-      Symbol(map): Object {},
+  "battlefield": Object {
+    "owner": Object {
+      "email": "user2@example.com",
+      "id": "3",
     },
   },
 }

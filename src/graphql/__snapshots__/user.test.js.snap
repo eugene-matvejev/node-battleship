@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL Type: User fetch user's friend's scalar values 1`] = `
+Object {
+  "user": Object {
+    "friends": Array [],
+  },
+}
+`;
+
+exports[`GraphQL Type: User fetch user's only scalar values 1`] = `
+Object {
+  "user": Object {
+    "email": "user@example.com",
+    "id": "1",
+  },
+}
+`;

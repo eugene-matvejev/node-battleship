@@ -1,24 +1,23 @@
 describe('GraphQL Type: Battlefield', () => {
-    // (new Uint8Array(iter)).forEach((_, i) => {
-        it(`fetch battlefield's only scalar values`, async () => {
-            const result = await query(
-                {
-                    query: `
+    it(`fetch battlefield's only scalar values`, async () => {
+        const { data } = await query(
+            {
+                query: `
                     {
                         battlefield(id: 1) {
                             id
                         }
                     }`
-                }
-            );
+            }
+        );
 
-            expect(result).toMatchSnapshot();
-        });
+        expect(data).toMatchSnapshot();
+    });
 
-        it(`fetch battlefield's owner's scalar values`, async () => {
-            const result = await query(
-                {
-                    query: `
+    it(`fetch battlefield's owner's scalar values`, async () => {
+        const { data } = await query(
+            {
+                query: `
                     {
                         battlefield(id: 1) {
                             owner {
@@ -27,29 +26,28 @@ describe('GraphQL Type: Battlefield', () => {
                             }
                         }
                     }`
-                }
-            );
+            }
+        );
 
-            expect(result).toMatchSnapshot();
-        });
+        expect(data).toMatchSnapshot();
+    });
 
-        it(`fetch battlefield's cells' scalar values`, async () => {
-            const result = await query(
+    it(`fetch battlefield's cells' scalar values`, async () => {
+        const { data } = await query(
+            {
+                query: `
                 {
-                    query: `
-                    {
-                        battlefield(id: 1) {
-                            cells {
-                                id
-                                seq
-                                coordinate
-                            }
+                    battlefield(id: 1) {
+                        cells {
+                            id
+                            seq
+                            coordinate
                         }
-                    }`
-                }
-            );
+                    }
+                }`
+            }
+        );
 
-            expect(result).toMatchSnapshot();
-        });
-    // });
+        expect(data).toMatchSnapshot();
+    });
 });
