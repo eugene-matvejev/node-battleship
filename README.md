@@ -15,16 +15,7 @@
 | __coverage__     |
 | _< codecov.io >_ | [![coverage][ci.coverage-master-badge]][ci.coverage-master] | [![coverage][ci.coverage-heroku-badge]][ci.coverage-heroku]
 
-# battleship GUI
-
-```
-targets/goals : WIP
-* to demostrate knowledge of:
- ** QA Automation, and best practices [jest/mocking]
- ** GraphQL
- ** DRY/KISS/SOLID principles
- ** DevOps [Docker/CI/CD etc]
-```
+# battleship GraphQL backend 
 
 ## THIS IS SPARE TIME PROJECT, WORK IN PROGRESS!
 
