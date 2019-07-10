@@ -1,34 +1,44 @@
 describe('GraphQL Type: User', () => {
-    it(`fetch user's only scalar values`, async () => {
-        const { data } = await query(
+    it(`fetch all users' only scalar values`, async () => {
+        const { data } = await query({
+            query: `
             {
-                query: `
-                {
-                    user(id: 1) {
-                        id
-                        email
-                    }
-                }`
-            }
-        );
+                users {
+                    id
+                    email
+                }
+            }`
+        });
 
         expect(data).toMatchSnapshot();
     });
 
-    it(`fetch user's friend's scalar values`, async () => {
-        const { data } = await query(
+    it(`fetch only scalar values`, async () => {
+        const { data } = await query({
+            query: `
             {
-                query: `
-                {
-                    user(id: 1) {
-                        friends {
-                            id
-                            email
-                        }
+                user(id: 1) {
+                    id
+                    email
+                }
+            }`
+        });
+
+        expect(data).toMatchSnapshot();
+    });
+
+    it(`fetch friend's scalar values`, async () => {
+        const { data } = await query({
+            query: `
+            {
+                user(id: 1) {
+                    friends {
+                        id
+                        email
                     }
-                }`
-            }
-        );
+                }
+            }`
+        });
 
         expect(data).toMatchSnapshot();
     });
