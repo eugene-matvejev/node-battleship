@@ -1,0 +1,1028 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL Type: Cell fetch all cells' only scalar values 1`] = `
+Object {
+  "cells": Array [
+    Object {
+      "coordinate": "A1",
+      "id": "1",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A2",
+      "id": "2",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A3",
+      "id": "3",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A4",
+      "id": "4",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A5",
+      "id": "5",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A6",
+      "id": "6",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A7",
+      "id": "7",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A8",
+      "id": "8",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A9",
+      "id": "9",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A10",
+      "id": "10",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B1",
+      "id": "11",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B2",
+      "id": "12",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B3",
+      "id": "13",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B4",
+      "id": "14",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B5",
+      "id": "15",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B6",
+      "id": "16",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B7",
+      "id": "17",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B8",
+      "id": "18",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B9",
+      "id": "19",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B10",
+      "id": "20",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C1",
+      "id": "21",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C2",
+      "id": "22",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C3",
+      "id": "23",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C4",
+      "id": "24",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C5",
+      "id": "25",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C6",
+      "id": "26",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C7",
+      "id": "27",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C8",
+      "id": "28",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C9",
+      "id": "29",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C10",
+      "id": "30",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D1",
+      "id": "31",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D2",
+      "id": "32",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D3",
+      "id": "33",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D4",
+      "id": "34",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D5",
+      "id": "35",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D6",
+      "id": "36",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D7",
+      "id": "37",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D8",
+      "id": "38",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D9",
+      "id": "39",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D10",
+      "id": "40",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E1",
+      "id": "41",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E2",
+      "id": "42",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E3",
+      "id": "43",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E4",
+      "id": "44",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E5",
+      "id": "45",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E6",
+      "id": "46",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E7",
+      "id": "47",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E8",
+      "id": "48",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E9",
+      "id": "49",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E10",
+      "id": "50",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F1",
+      "id": "51",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F2",
+      "id": "52",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F3",
+      "id": "53",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F4",
+      "id": "54",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F5",
+      "id": "55",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F6",
+      "id": "56",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F7",
+      "id": "57",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F8",
+      "id": "58",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F9",
+      "id": "59",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F10",
+      "id": "60",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G1",
+      "id": "61",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G2",
+      "id": "62",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G3",
+      "id": "63",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G4",
+      "id": "64",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G5",
+      "id": "65",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G6",
+      "id": "66",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G7",
+      "id": "67",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G8",
+      "id": "68",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G9",
+      "id": "69",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G10",
+      "id": "70",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H1",
+      "id": "71",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H2",
+      "id": "72",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H3",
+      "id": "73",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H4",
+      "id": "74",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H5",
+      "id": "75",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H6",
+      "id": "76",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H7",
+      "id": "77",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H8",
+      "id": "78",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H9",
+      "id": "79",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H10",
+      "id": "80",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I1",
+      "id": "81",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I2",
+      "id": "82",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I3",
+      "id": "83",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I4",
+      "id": "84",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I5",
+      "id": "85",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I6",
+      "id": "86",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I7",
+      "id": "87",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I8",
+      "id": "88",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I9",
+      "id": "89",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I10",
+      "id": "90",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J1",
+      "id": "91",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J2",
+      "id": "92",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J3",
+      "id": "93",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J4",
+      "id": "94",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J5",
+      "id": "95",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J6",
+      "id": "96",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J7",
+      "id": "97",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J8",
+      "id": "98",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J9",
+      "id": "99",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J10",
+      "id": "100",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A1",
+      "id": "101",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A2",
+      "id": "102",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A3",
+      "id": "103",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A4",
+      "id": "104",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A5",
+      "id": "105",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A6",
+      "id": "106",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A7",
+      "id": "107",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A8",
+      "id": "108",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A9",
+      "id": "109",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "A10",
+      "id": "110",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B1",
+      "id": "111",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B2",
+      "id": "112",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B3",
+      "id": "113",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B4",
+      "id": "114",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B5",
+      "id": "115",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B6",
+      "id": "116",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B7",
+      "id": "117",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B8",
+      "id": "118",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B9",
+      "id": "119",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "B10",
+      "id": "120",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C1",
+      "id": "121",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C2",
+      "id": "122",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C3",
+      "id": "123",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C4",
+      "id": "124",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C5",
+      "id": "125",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C6",
+      "id": "126",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C7",
+      "id": "127",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C8",
+      "id": "128",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C9",
+      "id": "129",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "C10",
+      "id": "130",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D1",
+      "id": "131",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D2",
+      "id": "132",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D3",
+      "id": "133",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D4",
+      "id": "134",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D5",
+      "id": "135",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D6",
+      "id": "136",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D7",
+      "id": "137",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D8",
+      "id": "138",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D9",
+      "id": "139",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "D10",
+      "id": "140",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E1",
+      "id": "141",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E2",
+      "id": "142",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E3",
+      "id": "143",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E4",
+      "id": "144",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E5",
+      "id": "145",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E6",
+      "id": "146",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E7",
+      "id": "147",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E8",
+      "id": "148",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E9",
+      "id": "149",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "E10",
+      "id": "150",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F1",
+      "id": "151",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F2",
+      "id": "152",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F3",
+      "id": "153",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F4",
+      "id": "154",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F5",
+      "id": "155",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F6",
+      "id": "156",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F7",
+      "id": "157",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F8",
+      "id": "158",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F9",
+      "id": "159",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "F10",
+      "id": "160",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G1",
+      "id": "161",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G2",
+      "id": "162",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G3",
+      "id": "163",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G4",
+      "id": "164",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G5",
+      "id": "165",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G6",
+      "id": "166",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G7",
+      "id": "167",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G8",
+      "id": "168",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G9",
+      "id": "169",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "G10",
+      "id": "170",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H1",
+      "id": "171",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H2",
+      "id": "172",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H3",
+      "id": "173",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H4",
+      "id": "174",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H5",
+      "id": "175",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H6",
+      "id": "176",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H7",
+      "id": "177",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H8",
+      "id": "178",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H9",
+      "id": "179",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "H10",
+      "id": "180",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I1",
+      "id": "181",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I2",
+      "id": "182",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I3",
+      "id": "183",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I4",
+      "id": "184",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I5",
+      "id": "185",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I6",
+      "id": "186",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I7",
+      "id": "187",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I8",
+      "id": "188",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I9",
+      "id": "189",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "I10",
+      "id": "190",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J1",
+      "id": "191",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J2",
+      "id": "192",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J3",
+      "id": "193",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J4",
+      "id": "194",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J5",
+      "id": "195",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J6",
+      "id": "196",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J7",
+      "id": "197",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J8",
+      "id": "198",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J9",
+      "id": "199",
+      "seq": 0,
+    },
+    Object {
+      "coordinate": "J10",
+      "id": "200",
+      "seq": 0,
+    },
+  ],
+}
+`;
+
+exports[`GraphQL Type: Cell fetch battlefield's scalar values 1`] = `
+Object {
+  "cell": Object {
+    "battlefield": Object {
+      "id": "2",
+    },
+  },
+}
+`;
+
+exports[`GraphQL Type: Cell fetch only scalar values 1`] = `
+Object {
+  "cell": Object {
+    "coordinate": "A1",
+    "id": "1",
+    "seq": 0,
+  },
+}
+`;

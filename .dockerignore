@@ -1,7 +1,5 @@
 .git/
 .vscode/
-var/
-!var/.gitignore
 
 coverage/
 

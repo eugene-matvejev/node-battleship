@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL Type: Battlefield fetch all battlefields' scalar values 1`] = `
+Object {
+  "battlefields": Array [
+    Object {
+      "id": "1",
+    },
+    Object {
+      "id": "2",
+    },
+  ],
+}
+`;
+
+exports[`GraphQL Type: Battlefield fetch cells' scalar values 1`] = `
+Object {
+  "battlefield": Object {
+    "cells": Array [],
+  },
+}
+`;
+
+exports[`GraphQL Type: Battlefield fetch only scalar values 1`] = `
+Object {
+  "battlefield": Object {
+    "id": "1",
+  },
+}
+`;
+
+exports[`GraphQL Type: Battlefield fetch owner's scalar values 1`] = `
+Object {
+  "battlefield": Object {
+    "owner": Object {
+      "email": "user2@example.com",
+      "id": "3",
+    },
+  },
+}
+`;

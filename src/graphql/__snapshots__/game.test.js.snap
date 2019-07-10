@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphQL Type: Game fetch all games' only scalar values 1`] = `
+Object {
+  "games": Array [
+    Object {
+      "id": "1",
+    },
+  ],
+}
+`;
+
+exports[`GraphQL Type: Game fetch battlefields' scalar values 1`] = `
+Object {
+  "game": Object {
+    "battlefields": Array [
+      Object {
+        "id": "1",
+      },
+      Object {
+        "id": "2",
+      },
+    ],
+  },
+}
+`;
+
+exports[`GraphQL Type: Game fetch only scalar values 1`] = `
+Object {
+  "game": Object {
+    "id": "1",
+  },
+}
+`;
