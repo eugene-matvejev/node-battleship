@@ -33,21 +33,22 @@
     "apollo-server-testing": "^2.6.7",
     "jest": "^24.8.0",
     "nodemon": "^1.19.1",
-    "sequelize-cli": "^5.5.0"
+    "sequelize-cli": "^5.5.0",
+    "sqlite3": "^4.0.9"
   },
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config node_modules/.bin/nodemon ./src/index.js",
+    "start": "node -r dotenv/config node_modules/.bin/nodemon ./src/app.js",
     "sequlize": "node -r dotenv/config node_modules/.bin/sequelize",
     "start:debug": "npm run start -- --inspect",
     "build": "babel --delete-dir-on-start --copy-files --out-dir ./build --verbose ./src",
-    "test": "jest"
+    "test": "node -r dotenv/config node_modules/.bin/jest"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**?(/*).js?(x)",
-      "!src/parameters.js?(x)",
       "!src/**?(/*)index.js?(x)"
-    ]
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>src/jest-provision.js"
   }
 }

@@ -13,27 +13,27 @@ export default {
     `,
     resolvers: {
         Query: {
-            battlefield: (entity, args, { models }, info) => {
-                return models.Battlefield.findOne({
+            battlefield: (entity, args, { orm }, info) => {
+                return orm.Battlefield.findOne({
                     where: {
                         id: args.id,
                     },
                     raw: true,
                 });
             },
-            battlefields: (entity, args, { models }, info) => {
-                return models.Battlefield.findAll({
+            battlefields: (entity, args, { orm }, info) => {
+                return orm.Battlefield.findAll({
                     raw: true,
                 });
             },
         },
         Battlefield: {
-            cells: (entity, args, { models }, info) => {
-                return models.Cell.findAll({
+            cells: (entity, args, { orm }, info) => {
+                return orm.Cell.findAll({
                     include: [
                         {
                             attributes: [],
-                            model: models.Battlefield,
+                            model: orm.Battlefield,
                             where: {
                                 id: entity.id,
                             },
@@ -42,12 +42,12 @@ export default {
                     raw: true,
                 });
             },
-            owner: (entity, args, { models }, info) => {
-                return models.User.findOne({
+            owner: (entity, args, { orm }, info) => {
+                return orm.User.findOne({
                     include: [
                         {
                             attributes: [],
-                            model: models.Battlefield,
+                            model: orm.Battlefield,
                             where: {
                                 id: entity.id,
                             },

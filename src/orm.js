@@ -1,17 +1,17 @@
 import fs from 'fs';
-import path from 'path';
 import Sequelize from 'sequelize';
-import { database as c } from '../../config/config';
+import conf from '../config/config';
+
+const c = conf[process.env.NODE_ENV];
 
 const sequelize = new Sequelize(c.database, c.username, c.password, c);
 
-const basename = path.basename(__filename);
 const context = fs
-    .readdirSync(__dirname)
+    .readdirSync(`${__dirname}/models`)
     .reduce(
         (acc, file) => {
-            if ((file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js')) {
-                const model = sequelize['import'](path.join(__dirname, file));
+            if ((file.indexOf('.') !== 0) && (file.slice(-3) === '.js')) {
+                const model = sequelize['import'](`${__dirname}/models/${file}`);
                 acc[model.name] = model;
             }
 

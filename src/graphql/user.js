@@ -13,27 +13,27 @@ export default {
     `,
     resolvers: {
         Query: {
-            user: (entity, args, { models }, info) => {
-                return models.User.findOne({
+            user: (entity, args, { orm }, info) => {
+                return orm.User.findOne({
                     where: {
                         id: args.id,
                     },
                     raw: true,
                 });
             },
-            users: (entity, args, { models }, info) => {
-                return models.User.findAll({
+            users: (entity, args, { orm }, info) => {
+                return orm.User.findAll({
                     raw: true,
                 });
             },
         },
         User: {
-            friends: (entity, args, { models }, info) => {
-                return models.User.findAll({
+            friends: (entity, args, { orm }, info) => {
+                return orm.User.findAll({
                     include: [
                         {
                             attributes: [],
-                            model: models.User,
+                            model: orm.User,
                             as: 'friendship_owner',
                             where: {
                                 id: entity.id,

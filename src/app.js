@@ -1,8 +1,8 @@
 import { ApolloServer } from 'apollo-server';
 import { typeDefs, resolvers } from './graphql';
-import models from './models';
+import orm from './orm';
 
-models
+orm
     .sequelize
     .sync({
         // force: true
@@ -12,14 +12,14 @@ models
             typeDefs,
             resolvers,
             context: {
-                models,
+                orm,
             },
             formatError: (error) => {
                 console.log(error);
                 return error;
             },
             formatResponse: (response) => {
-                console.log(response);
+                // console.log(response);
                 return response;
             },
         })

@@ -1,10 +1,10 @@
 import { gql } from 'apollo-server';
 import { merge } from 'lodash';
 
-import battlefield from './battlefield';
-import cell from './cell';
-import game from './game';
-import user from './user';
+import battlefield from './graphql/battlefield';
+import cell from './graphql/cell';
+import game from './graphql/game';
+import user from './graphql/user';
 
 export const typeDefs = gql`
     type Query {

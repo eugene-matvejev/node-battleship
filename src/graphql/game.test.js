@@ -1,5 +1,5 @@
 import { createTestClient } from 'apollo-server-testing';
 
-describe('Game', () => {
+describe.skip('GraphQL Type: Game', () => {
 
 });

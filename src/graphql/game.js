@@ -12,27 +12,27 @@ export default {
     `,
     resolvers: {
         Query: {
-            game: (entity, args, { models }, info) => {
-                return models.Game.findOne({
+            game: (entity, args, { orm }, info) => {
+                return orm.Game.findOne({
                     where: {
                         id: args.id,
                     },
                     raw: true,
                 });
             },
-            games: (entity, args, { models }, info) => {
-                return models.Game.findAll({
+            games: (entity, args, { orm }, info) => {
+                return orm.Game.findAll({
                     raw: true,
                 });
             },
         },
         Game: {
-            battlefields: (entity, args, { models }, info) => {
-                return models.Battlefield.findAll({
+            battlefields: (entity, args, { orm }, info) => {
+                return orm.Battlefield.findAll({
                     include: [
                         {
                             attributes: [],
-                            model: models.Game,
+                            model: orm.Game,
                             where: {
                                 id: entity.id,
                             },

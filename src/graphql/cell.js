@@ -14,27 +14,27 @@ export default {
     `,
     resolvers: {
         Query: {
-            cell: (entity, args, { models }, info) => {
-                return models.Cell.findOne({
+            cell: (entity, args, { orm }, info) => {
+                return orm.Cell.findOne({
                     where: {
                         id: args.id,
                     },
                     raw: true,
                 });
             },
-            cells: (entity, args, { models }, info) => {
-                return models.Cell.findAll({
+            cells: (entity, args, { orm }, info) => {
+                return orm.Cell.findAll({
                     raw: true,
                 });
             },
         },
         Cell: {
-            battlefield: async (entity, args, { models }, info) => {
-                return models.Battlefield.findOne({
+            battlefield: async (entity, args, { orm }, info) => {
+                return orm.Battlefield.findOne({
                     include: [
                         {
                             attributes: [],
-                            model: models.Cell,
+                            model: orm.Cell,
                             where: {
                                 id: entity.id,
                             },
