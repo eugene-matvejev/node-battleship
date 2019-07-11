@@ -17,7 +17,7 @@
 
 # battleship GraphQL backend
 
-## THIS IS SPARE TIME PROJECT, WORK IN PROGRESS!
+##### THIS IS SPARE TIME PROJECT, WORK IN PROGRESS!
 
 ### software requirements
 
