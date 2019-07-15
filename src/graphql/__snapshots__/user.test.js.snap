@@ -4,20 +4,16 @@ exports[`GraphQL Type: User fetch all users' only scalar values 1`] = `
 Object {
   "users": Array [
     Object {
-      "email": "user@example.com",
+      "email": "user1@example.com",
       "id": "1",
     },
     Object {
-      "email": "user-banned@example.com",
+      "email": "user2@example.com",
       "id": "2",
     },
     Object {
-      "email": "user2@example.com",
-      "id": "3",
-    },
-    Object {
       "email": "user3@example.com",
-      "id": "4",
+      "id": "3",
     },
   ],
 }
@@ -29,11 +25,11 @@ Object {
     "friends": Array [
       Object {
         "email": "user2@example.com",
-        "id": "3",
+        "id": "2",
       },
       Object {
         "email": "user3@example.com",
-        "id": "4",
+        "id": "3",
       },
     ],
   },
@@ -43,7 +39,7 @@ Object {
 exports[`GraphQL Type: User fetch only scalar values 1`] = `
 Object {
   "user": Object {
-    "email": "user@example.com",
+    "email": "user1@example.com",
     "id": "1",
   },
 }

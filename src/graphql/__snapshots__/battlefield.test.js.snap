@@ -535,7 +535,7 @@ Object {
   "battlefield": Object {
     "owner": Object {
       "email": "user2@example.com",
-      "id": "3",
+      "id": "2",
     },
   },
 }
