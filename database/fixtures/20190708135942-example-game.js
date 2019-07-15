@@ -9,7 +9,7 @@ module.exports = {
     up: async (queryInterface, Sequelize) => {
         /** nasty 'work around' to make fixture work on SQLite/MySQL/PostreSQL */
         const id = await orm.Game.findOne({
-            orderBy: [['id', 'DESC']],
+            order: [['id', 'DESC']],
             raw: true,
         }).then((v) => v === null ? 1 : v.id + 1);
 
