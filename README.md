@@ -79,5 +79,6 @@ CI build is mandatory check for every PR into master/heroku branches
 | DB_HOSTNAME   | 127.0.0.1     | string
 | DB_USERNAME   | root          | string
 | DB_PASSWORD   | password      | string
+| DB_PORT       | 3306          | number
 | DB_NAME       | battleship    | string
 | DB_DIALECT    | mysql         | string
