@@ -1,6 +1,6 @@
-import fs from 'fs';
-import Sequelize from 'sequelize';
-import conf from '../config/config';
+const fs = require('fs');
+const Sequelize = require('sequelize');
+const conf = require('../config/config');
 
 const c = conf[process.env.NODE_ENV];
 
@@ -31,4 +31,4 @@ for (const name in context) {
 context.sequelize = sequelize;
 context.Sequelize = Sequelize;
 
-export default context;
+module.exports = context;
