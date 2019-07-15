@@ -20,31 +20,24 @@ const databaseReset = async () => {
         .then(
             async () => {
                 const proxyRequire = (path) => {
-                    const modulePath = require.resolve(path);
-                    const moduleExport = require(modulePath)
+                    const resolvedPath = require.resolve(path);
+                    const m = require(resolvedPath);
 
-                    return moduleExport
+                    return m;
                 };
 
                 const executeFiles = async (path) => {
-                    const acc = [];
                     const files = fs.readdirSync(path);
                     for (const file of files) {
                         const f = `${path}/${file}`;
 
-                        const migration = proxyRequire(f);
-                        await migration.up(orm.sequelize.queryInterface, orm.Sequelize);
-
-                        acc.push(f);
+                        const obj = proxyRequire(f);
+                        await obj.up(orm.sequelize.queryInterface, orm.Sequelize);
                     }
-
-                    return acc;
                 }
 
-                const migrations = await executeFiles(`${__dirname}/../database/migrations`);
-                const fixtures = await executeFiles(`${__dirname}/../database/fixtures`);
-
-                console.log({ migrations, fixtures });
+                await executeFiles(`${__dirname}/../database/migrations`);
+                await executeFiles(`${__dirname}/../database/fixtures`);
             }
         )
 };
