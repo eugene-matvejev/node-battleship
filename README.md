@@ -8,16 +8,14 @@
 [ci.coverage-heroku-badge]: https://codecov.io/gh/eugene-matvejev/node-battleship/branch/heroku/graph/badge.svg
 [ci.coverage-heroku]: https://codecov.io/gh/eugene-matvejev/node-battleship/branch/heroku
 
-|                  | master                                                      | heroku
-|---               |---                                                          |---
-| __tests__        |
-| _< Circle CI >_  | [![tests][ci.tests-master-badge]][ci.tests-master]          | [![tests][ci.tests-heroku-badge]][ci.tests-heroku]
-| __coverage__     |
-| _< codecov.io >_ | [![coverage][ci.coverage-master-badge]][ci.coverage-master] | [![coverage][ci.coverage-heroku-badge]][ci.coverage-heroku]
+|               | master                                                        | heroku
+|---            |---                                                            | ---
+| __tests__     | [![tests][ci.tests-master-badge]][ci.tests-master]            | [![tests][ci.tests-heroku-badge]][ci.tests-heroku]
+| __coverage__  | [![coverage][ci.coverage-master-badge]][ci.coverage-master]   | [![coverage][ci.coverage-heroku-badge]][ci.coverage-heroku]
 
 # battleship GraphQL backend
 
-## THIS IS SPARE TIME PROJECT, WORK IN PROGRESS!
+##### THIS IS SPARE TIME PROJECT, WORK IN PROGRESS!
 
 ### software requirements
 
