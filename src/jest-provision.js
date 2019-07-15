@@ -19,13 +19,11 @@ const databaseReset = async () => {
         .drop()
         .then(
             async () => {
-                /** any better way of doing this? */
                 const proxyRequire = (path) => {
-                    const module = {};
+                    const modulePath = require.resolve(path);
+                    const moduleExport = require(modulePath)
 
-                    ((content, module) => eval(content))(fs.readFileSync(path, { encoding: 'utf8' }), module);
-
-                    return module.exports;
+                    return moduleExport
                 };
 
                 const executeFiles = async (path) => {
@@ -34,13 +32,8 @@ const databaseReset = async () => {
                     for (const file of files) {
                         const f = `${path}/${file}`;
 
-                        try {
-                            const migration = proxyRequire(f);
-                            debugger;
-                            await migration.up(orm.sequelize.queryInterface, orm.Sequelize);
-                        } catch (e) {
-                            debugger;
-                        }
+                        const migration = proxyRequire(f);
+                        await migration.up(orm.sequelize.queryInterface, orm.Sequelize);
 
                         acc.push(f);
                     }
