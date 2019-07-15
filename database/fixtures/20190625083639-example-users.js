@@ -15,7 +15,7 @@ module.exports = {
             user2,
             user3,
         ] = await Promise.all([
-            /** work around https://github.com/sequelize/sequelize/issues/11175 */
+            /** work around of https://github.com/sequelize/sequelize/issues/11175 to make fixture work on SQLite/MySQL/PostreSQL */
             queryInterface.bulkInsert(
                 'users',
                 [
@@ -28,7 +28,7 @@ module.exports = {
                     returning: true,
                 }
             ),
-            /** work around https://github.com/sequelize/sequelize/issues/11175 */
+            /** work around of https://github.com/sequelize/sequelize/issues/11175 to make fixture work on SQLite/MySQL/PostreSQL */
             queryInterface.bulkInsert(
                 'users',
                 [
@@ -41,7 +41,7 @@ module.exports = {
                     returning: true,
                 }
             ),
-            /** work around https://github.com/sequelize/sequelize/issues/11175 */
+            /** work around of https://github.com/sequelize/sequelize/issues/11175 to make fixture work on SQLite/MySQL/PostreSQL */
             queryInterface.bulkInsert(
                 'users',
                 [
@@ -56,11 +56,11 @@ module.exports = {
             ),
         ]);
 
-        /** nasty 'work around' to make fixture work on SQLite/MySQL/PostreSQL */
+        /** work around of https://github.com/sequelize/sequelize/issues/11175 to make fixture work on SQLite/MySQL/PostreSQL */
         const user = Array.isArray(user1) ? user1[0].id : user1;
-        /** nasty 'work around' to make fixture work on SQLite/MySQL/PostreSQL */
+        /** work around of https://github.com/sequelize/sequelize/issues/11175 to make fixture work on SQLite/MySQL/PostreSQL */
         const friend1 = Array.isArray(user2) ? user2[0].id : user2;
-        /** nasty 'work around' to make fixture work on SQLite/MySQL/PostreSQL */
+        /** work around of https://github.com/sequelize/sequelize/issues/11175 to make fixture work on SQLite/MySQL/PostreSQL */
         const friend2 = Array.isArray(user3) ? user3[0].id : user3;
 
         return queryInterface.bulkInsert(
