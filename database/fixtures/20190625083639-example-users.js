@@ -2,6 +2,9 @@
 
 const crypto = require('crypto');
 
+const parameters = require('../../src/parameters');
+const { secret } = parameters;
+
 const email1 = 'user1@example.com';
 const email2 = 'user2@example.com';
 const email3 = 'user3@example.com';
@@ -21,7 +24,7 @@ module.exports = {
                 [
                     {
                         email: email1,
-                        password: crypto.createHmac('sha256', '').update(`${email1}:${password}`).digest('hex'),
+                        password: crypto.createHmac('sha256', '').update(`${email1}:${password}:${secret}`).digest('hex'),
                     },
                 ],
                 {
@@ -34,7 +37,7 @@ module.exports = {
                 [
                     {
                         email: email2,
-                        password: crypto.createHmac('sha256', '').update(`${email2}:${password}`).digest('hex'),
+                        password: crypto.createHmac('sha256', '').update(`${email2}:${password}:${secret}`).digest('hex'),
                     },
                 ],
                 {
@@ -47,7 +50,7 @@ module.exports = {
                 [
                     {
                         email: email3,
-                        password: crypto.createHmac('sha256', '').update(`${email3}:${password}`).digest('hex'),
+                        password: crypto.createHmac('sha256', '').update(`${email3}:${password}:${secret}`).digest('hex'),
                     },
                 ],
                 {
