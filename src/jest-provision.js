@@ -47,6 +47,4 @@ global.query = query;
 global.mutate = mutate;
 global.databaseReset = databaseReset;
 
-global.iter = 125;
-
 beforeAll(databaseReset);

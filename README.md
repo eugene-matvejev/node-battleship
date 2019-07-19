@@ -19,10 +19,10 @@
 
 ### software requirements
 
-if you're using `make` commands, local **node.js** and **npm** aren't required
+if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ and __[docker-compose](https://docs.docker.com/compose/install/)__ are required, and local __[node.js](https://nodejs.org/)__ with __[npm](https://www.npmjs.com/)__ are optional
 * [node.js](https://nodejs.org/) v10+
 * [npm](https://www.npmjs.com/) v6+ or [yarn](https://yarnpkg.com/)
-* __optional__ [makefile](https://en.wikipedia.org/wiki/Makefile) comes out of the box in *nix enviroments
+* __optional__ [makefile](https://en.wikipedia.org/wiki/Makefile) comes out of the box in *unix* enviroments
 * __optional__ [docker](https://www.docker.com/) v18.09+
 * __optional__ [sqlite3](https://www.sqlite.org/index.html) v3+ *for 'integration' tests only*
 
@@ -45,15 +45,14 @@ if you're using `make` commands, local **node.js** and **npm** aren't required
 
 ### how to install
 
-* if you're using `make` commands and have [docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/) installed, then no steps required
-* otherwise you need **node.js**, then execute `$ npm i`
+* with `make` commands no steps additional required, otherwise you need execute `$ npm i`
 
 ### how to run tests
 
-* 'jest' unit and functional tests `$ make test` or `$ npm test`
-  * __[optional 'jest' CLI params](https://facebook.github.io/jest/docs/en/cli.html)__
-    * to generate coverage report `--coverage`, example: `$ npm test -- --coverage`, report will be located in __./coverage__ directory
-    * to run tests __only__ in specific file, example: `$ npm test src/graphql/user.test.js`
+* `$ make test` or `$ npm test`
+  * __optional__ [ 'jest' CLI params](https://facebook.github.io/jest/docs/en/cli.html) some examples:
+    * to generate coverage report, example: `$ npm test -- --coverage`, which will be located in __./coverage__ directory
+    * to execute tests __only__ in specific file, example: `$ npm test src/graphql/user.test.js`
 
 ### how to run in 'development' mode
 
@@ -61,7 +60,7 @@ if you're using `make` commands, local **node.js** and **npm** aren't required
 
 ### how to run in 'production' mode
 
-* `$ make serve`, there is no _npm only_ analogue
+* `$ make serve`, there is no *npm only* analogue
 * if you need __only__ generate static assets
   * `$ make build` or `$ npm run build` - generated assets will be located in __./build__ directory
 
@@ -83,3 +82,4 @@ CI build is mandatory check for every PR into master/heroku branches
 | DB_PORT       | 3306          | number
 | DB_NAME       | battleship    | string
 | DB_DIALECT    | mysql         | string
+| SECRET_KEY    | local.key     | string
