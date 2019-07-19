@@ -6,6 +6,7 @@ DB_HOSTNAME := host.docker.internal
 DB_USERNAME := root
 DB_PASSWORD := password
 DB_NAME := battleship
+DB_PORT := 3306
 DB_DIALECT := mysql
 
 .SHARED_VOLUMES := \
@@ -24,6 +25,7 @@ DB_DIALECT := mysql
  	-e DB_USERNAME=$(DB_USERNAME) \
  	-e DB_PASSWORD=$(DB_PASSWORD) \
  	-e DB_NAME=$(DB_NAME) \
+ 	-e DB_PORT=$(DB_PORT) \
  	-e DB_DIALECT=$(DB_DIALECT)
 
 help:
