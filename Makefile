@@ -1,5 +1,7 @@
 .DEFAULT_GOAL := interactive
 .DEV_IMAGE := sa
+.SERVE_IMAGE := sa-serve
+
 
 PORT := 8081
 PORT_DEBUG := 9229
@@ -38,10 +40,12 @@ help:
 	@echo ""
 	@echo "-- DOCKER IMAGE PREPARATION"
 	@echo " make dev-image\t\tbuild [$(.DEV_IMAGE)] image which encapsulate dev-dependencies, nothing else"
+	@echo " make serve-image\tbuild [$(.SERVE_IMAGE)] image of node + apline [no NPM]"
 	@echo ""
 	@echo "-- COMMANDS"
 	@echo " make\t\t\talias for 'make $(.DEFAULT_GOAL)'"
 	@echo " make interactive\trun [$(.DEV_IMAGE)] image, content become available on http://localhost:$(PORT) with debugger on $(PORT) port"
+	@echo " make serve\t\trun [$(.SERVE_IMAGE)] image, content become available on http://localhost:$(PORT)"
 	@echo " make test\t\texecute unit and functional tests"
 	@echo " make build\t\tgenerate static assets in './build' directory"
 	@echo ""
@@ -49,8 +53,11 @@ help:
 dev-image:
 	docker build -t $(.DEV_IMAGE) .
 
+serve-image:
+	docker build -t $(.SERVE_IMAGE) . -f serve.Dockerfile
+
 build: dev-image
-	mkdir $(PWD)/build -p
+	mkdir -p $(PWD)/build
 	docker run \
 		--rm \
 		-it \
@@ -81,3 +88,14 @@ interactive: dev-image
 		-p $(PORT_DEBUG):$(PORT_DEBUG) \
 		--entrypoint=npm \
 		$(.DEV_IMAGE) run start:debug
+
+serve: build serve-image
+	docker run \
+		--rm \
+		--name sa-serve \
+		-it \
+		-v $(PWD)/build:/www/build \
+		$(.ENV_VARIABLES) \
+		-p $(PORT):$(PORT) \
+		--entrypoint=node \
+		$(.SERVE_IMAGE) /www/build/app.js

@@ -42,7 +42,7 @@
     "start": "node -r dotenv/config node_modules/.bin/nodemon ./src/app.js",
     "sequlize": "node -r dotenv/config node_modules/.bin/babel-node ./node_modules/.bin/sequelize",
     "start:debug": "npm run start -- --inspect",
-    "build": "babel --delete-dir-on-start --copy-files --out-dir ./build --verbose ./src",
+    "build": "babel --copy-files --out-dir ./build --verbose ./src",
     "test": "node -r dotenv/config node_modules/.bin/jest"
   },
   "jest": {
