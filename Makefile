@@ -5,7 +5,7 @@ PORT := 8081
 DB_HOSTNAME := host.docker.internal
 DB_USERNAME := root
 DB_PASSWORD := password
-DB_NAME := game
+DB_NAME := battleship
 DB_DIALECT := mysql
 
 .SHARED_VOLUMES := \

@@ -50,6 +50,9 @@
       "src/*/**.js",
       "!src/**?(/*)index.js"
     ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.{js,ts}"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>src/jest-provision.js"
     ]
