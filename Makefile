@@ -11,6 +11,7 @@ DB_PASSWORD := password
 DB_NAME := battleship
 DB_PORT := 3306
 DB_DIALECT := mysql
+SECRET_KEY := local.key
 
 .SHARED_VOLUMES := \
 	-v $(PWD)/config:/www/config \
@@ -29,7 +30,8 @@ DB_DIALECT := mysql
  	-e DB_PASSWORD=$(DB_PASSWORD) \
  	-e DB_NAME=$(DB_NAME) \
  	-e DB_PORT=$(DB_PORT) \
- 	-e DB_DIALECT=$(DB_DIALECT)
+ 	-e DB_DIALECT=$(DB_DIALECT) \
+ 	-e SECRET_KEY=$(SECRET_KEY)
 
 help:
 	@echo ""
