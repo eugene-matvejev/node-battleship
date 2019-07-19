@@ -33,6 +33,7 @@ if you're using `make` commands, local **node.js** and **npm** aren't required
 * [sequlize](http://docs.sequelizejs.com/)
 * [apollo server](https://www.apollographql.com/docs/apollo-server/)
 * [express.js](https://expressjs.com/)
+* [babel](https://babeljs.io/)
 
 ### used services
 
