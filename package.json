@@ -1,14 +1,14 @@
 {
   "name": "battleship-sa",
   "private": true,
-  "bugs": {
-    "url": "https://github.com/eugene-matvejev/battleship-game-api-node/issues"
-  },
-  "homepage": "https://github.com/eugene-matvejev/battleship-game-api-node#readme",
   "version": "0.1.0",
+  "homepage": "https://github.com/eugene-matvejev/node-battleship#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eugene-matvejev/battleship-game-api-node.git"
+    "url": "git+https://github.com/eugene-matvejev/node-battleship.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eugene-matvejev/node-battleship/issues"
   },
   "license": "MIT",
   "author": "Eugene Matvejev, <eugene.matvejev@gmail.com>",
