@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/eugene-matvejev/battleship-game-api-node.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "Eugene Matvejev, <eugene.matvejev@gmail.com>",
   "description": "WIP",
   "engines": {
