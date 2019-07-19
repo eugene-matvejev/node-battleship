@@ -80,5 +80,4 @@ interactive: dev-image
 		-p $(PORT):$(PORT) \
 		-p $(PORT_DEBUG):$(PORT_DEBUG) \
 		--entrypoint=npm \
-		-e REACT_APP_WEBSITE_NAME=EXAMPLE \
 		$(.DEV_IMAGE) run start:debug
