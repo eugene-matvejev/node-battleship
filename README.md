@@ -33,6 +33,7 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 * [sequlize](http://docs.sequelizejs.com/)
 * [apollo server](https://www.apollographql.com/docs/apollo-server/)
 * [express.js](https://expressjs.com/)
+* [babel](https://babeljs.io/)
 
 ### used services
 
