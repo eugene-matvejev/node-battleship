@@ -83,3 +83,10 @@ CI build is mandatory check for every PR into master/heroku branches
 | DB_NAME       | battleship    | string
 | DB_DIALECT    | mysql         | string
 | SECRET_KEY    | local.key     | string
+
+### supported databases
+| database      | version
+|---            |---
+| MySQL         | *5.7 tested*, using [mysql2](https://www.npmjs.com/package/mysql2)
+| PostgreSQL    | *11 tested*, using [pg](https://www.npmjs.com/package/pg)
+| SQLite        | *4.0.9 tested*, using [sqlite3](https://www.npmjs.com/package/sqlite3)
