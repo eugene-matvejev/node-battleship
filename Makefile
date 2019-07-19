@@ -2,6 +2,7 @@
 .DEV_IMAGE := sa
 
 PORT := 8081
+PORT_DEBUG := 9229
 DB_HOSTNAME := host.docker.internal
 DB_USERNAME := root
 DB_PASSWORD := password
@@ -40,7 +41,7 @@ help:
 	@echo ""
 	@echo "-- COMMANDS"
 	@echo " make\t\t\talias for 'make $(.DEFAULT_GOAL)'"
-	@echo " make interactive\trun [$(.DEV_IMAGE)] image, content become available on http://localhost:$(.PORT)"
+	@echo " make interactive\trun [$(.DEV_IMAGE)] image, content become available on http://localhost:$(PORT) with debugger on $(PORT) port"
 	@echo " make test\t\texecute unit and functional tests"
 	@echo " make build\t\tgenerate static assets in './build' directory"
 	@echo ""
@@ -77,6 +78,7 @@ interactive: dev-image
 		$(.SHARED_VOLUMES) \
 		$(.ENV_VARIABLES) \
 		-p $(PORT):$(PORT) \
+		-p $(PORT_DEBUG):$(PORT_DEBUG) \
 		--entrypoint=npm \
 		-e REACT_APP_WEBSITE_NAME=EXAMPLE \
-		$(.DEV_IMAGE) run start
+		$(.DEV_IMAGE) run start:debug
