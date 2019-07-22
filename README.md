@@ -29,12 +29,11 @@ This project can be run via `make` or `npm` commands. If you're using `make` com
 
 ### used technologies
 
-* [jest](https://facebook.github.io/jest/)
-* [graphql](https://graphql.org/)
-* [sequlize](http://docs.sequelizejs.com/)
 * [apollo server](https://www.apollographql.com/docs/apollo-server/)
 * [express.js](https://expressjs.com/)
-* [babel](https://babeljs.io/)
+* [sequlize](http://docs.sequelizejs.com/)
+* [graphql](https://graphql.org/)
+* [jest](https://facebook.github.io/jest/)
 
 ### used services
 
