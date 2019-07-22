@@ -28,12 +28,11 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 
 ### used technologies
 
-* [jest](https://facebook.github.io/jest/)
-* [graphql](https://graphql.org/)
-* [sequlize](http://docs.sequelizejs.com/)
 * [apollo server](https://www.apollographql.com/docs/apollo-server/)
 * [express.js](https://expressjs.com/)
-* [babel](https://babeljs.io/)
+* [sequlize](http://docs.sequelizejs.com/)
+* [graphql](https://graphql.org/)
+* [jest](https://facebook.github.io/jest/)
 
 ### used services
 
