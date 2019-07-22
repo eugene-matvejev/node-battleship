@@ -7,9 +7,7 @@ import game from './graphql/game';
 import user from './graphql/user';
 
 export const typeDefs = gql`
-    type Query {
-        version: String!
-    }
+    type Query
     ${battlefield.typeDefs}
     ${cell.typeDefs}
     ${game.typeDefs}
@@ -17,11 +15,6 @@ export const typeDefs = gql`
 `;
 
 export const resolvers = merge(
-    {
-        Query: {
-            version: () => `1.0`,
-        }
-    },
     battlefield.resolvers,
     cell.resolvers,
     game.resolvers,
