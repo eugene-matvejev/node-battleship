@@ -19,12 +19,13 @@
 
 ### software requirements
 
-if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ and __[docker-compose](https://docs.docker.com/compose/install/)__ are required, and local __[node.js](https://nodejs.org/)__ with __[npm](https://www.npmjs.com/)__ are optional
 * [node.js](https://nodejs.org/) v10+
 * [npm](https://www.npmjs.com/) v6+ or [yarn](https://yarnpkg.com/)
 * __optional__ [makefile](https://en.wikipedia.org/wiki/Makefile) comes out of the box in *unix* enviroments
 * __optional__ [docker](https://www.docker.com/) v18.09+
 * __optional__ [sqlite3](https://www.sqlite.org/index.html) v3+ *for 'integration' tests only*
+
+This project can be run via `make` or `npm` commands. If you're using `make` commands, __[docker](https://docs.docker.com/install/)__ and __[docker-compose](https://docs.docker.com/compose/install/)__ are required. If using `npm` commands local __[node.js](https://nodejs.org/)__ with __[npm](https://www.npmjs.com/)__ is optional.
 
 ### used technologies
 
@@ -45,7 +46,8 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 
 ### how to install
 
-* with `make` commands no steps additional required, otherwise you need execute `$ npm i`
+* If using `make` commands no steps additional required
+* If using `npm` commands execute `$ npm i`
 
 ### how to run tests
 
@@ -60,18 +62,18 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 
 ### how to run in 'production' mode
 
-* `$ make serve`, there is no *npm only* analogue
-* if you need __only__ generate static assets
+* `$ make serve`, there is no *npm* equivalent
+* if you __only__ need to generate static assets
   * `$ make build` or `$ npm run build` - generated assets will be located in __./build__ directory
 
 ### gitflow
 
-* master -> most upto date __production__ version
-* __proxy branch__ heroku -> master is not deployed to heroku with every push, because of limiations of 'free account'
+* master -> most up-to-date __production__ version
+* __proxy branch__ heroku -> master is not deployed to heroku with every push, because of limitations of 'free account'
 * other branches -> 'feature branches' get merged into master
-CI build is mandatory check for every PR into master/heroku branches
+CI build is a mandatory check for every PR into master/heroku branches
 
-### used environment variables
+### environment variables
 
 | variable      | default value | used as
 |---            |---            |---
