@@ -15,11 +15,11 @@
 
 # battleship GraphQL backend
 
-##### THIS IS SPARE TIME PROJECT, WORK IN PROGRESS!
+##### THIS IS SPARE TIME PROJECT, WORK IN PROGRESS! [turing grow is not spare time, I would suggest saying is a ReadMe Template for turing grow projects ]
 
 ### software requirements
 
-if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ and __[docker-compose](https://docs.docker.com/compose/install/)__ are required, and local __[node.js](https://nodejs.org/)__ with __[npm](https://www.npmjs.com/)__ are optional
+if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ and __[docker-compose](https://docs.docker.com/compose/install/)__ are required, and local __[node.js](https://nodejs.org/)__ with __[npm](https://www.npmjs.com/)__ are optional [this can be confusing for those unfamiliar with makefiles, as makefile is just a script builder and all the software mention is required regardless. I suggest you get rid of the sentance and just keep the software and technologies used. ]
 * [node.js](https://nodejs.org/) v10+
 * [npm](https://www.npmjs.com/) v6+ or [yarn](https://yarnpkg.com/)
 * __optional__ [makefile](https://en.wikipedia.org/wiki/Makefile) comes out of the box in *unix* enviroments
@@ -60,8 +60,8 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 
 ### how to run in 'production' mode
 
-* `$ make serve`, there is no *npm only* analogue
-* if you need __only__ generate static assets
+* `$ make serve`, there is no *npm only* analogue [as make is declared optional, idealy a bash script should be added here]
+* if you need __only__ [to] generate static assets
   * `$ make build` or `$ npm run build` - generated assets will be located in __./build__ directory
 
 ### gitflow
