@@ -28,12 +28,11 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 
 ### used technologies
 
-* [jest](https://facebook.github.io/jest/)
-* [graphql](https://graphql.org/)
-* [sequlize](http://docs.sequelizejs.com/)
 * [apollo server](https://www.apollographql.com/docs/apollo-server/)
 * [express.js](https://expressjs.com/)
-* [babel](https://babeljs.io/)
+* [sequlize](http://docs.sequelizejs.com/)
+* [graphql](https://graphql.org/)
+* [jest](https://facebook.github.io/jest/)
 
 ### used services
 
@@ -60,16 +59,16 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 
 ### how to run in 'production' mode
 
-* `$ make serve`, there is no *npm only* analogue [as make is declared optional, idealy a bash script should be added here]
-* if you need __only__ [to] generate static assets
+* `$ make serve`, there is no *npm* equivalent
+* if you __only__ need to generate static assets
   * `$ make build` or `$ npm run build` - generated assets will be located in __./build__ directory
 
 ### gitflow
 
-* master -> most upto date __production__ version
-* __proxy branch__ heroku -> master is not deployed to heroku with every push, because of limiations of 'free account'
+* master -> most up-to-date __production__ version
+* __proxy branch__ heroku -> master is not deployed to heroku with every push, because of limitations of 'free account'
 * other branches -> 'feature branches' get merged into master
-CI build is mandatory check for every PR into master/heroku branches
+CI build is a mandatory check for every PR into master/heroku branches
 
 ### used environment variables
 
