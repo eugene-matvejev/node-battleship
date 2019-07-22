@@ -59,16 +59,16 @@ if you're using `make` commands, __[docker](https://docs.docker.com/install/)__ 
 
 ### how to run in 'production' mode
 
-* `$ make serve`, there is no *npm only* analogue
-* if you need __only__ generate static assets
+* `$ make serve`, there is no *npm* equivalent
+* if you __only__ need to generate static assets
   * `$ make build` or `$ npm run build` - generated assets will be located in __./build__ directory
 
 ### gitflow
 
-* master -> most upto date __production__ version
-* __proxy branch__ heroku -> master is not deployed to heroku with every push, because of limiations of 'free account'
+* master -> most up-to-date __production__ version
+* __proxy branch__ heroku -> master is not deployed to heroku with every push, because of limitations of 'free account'
 * other branches -> 'feature branches' get merged into master
-CI build is mandatory check for every PR into master/heroku branches
+CI build is a mandatory check for every PR into master/heroku branches
 
 ### used environment variables
 
